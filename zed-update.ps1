@@ -2,6 +2,7 @@
 $owner = "sonercirit"
 $repo = "zed-windows-stable"
 $zedPath = "E:\Softs\zed.exe"
+$zedShortcutPath = "E:\Softs\zed.lnk"
 $repoReleasesUrl = "https://github.com/$owner/$repo/releases/latest"
 $tempExe = "$env:TEMP\zed-latest.exe"
 
@@ -127,7 +128,7 @@ try {
 
     # Launch Zed
     Write-Status "Launching Zed editor"
-    Start-Process -FilePath $zedPath
+    Start-Process -FilePath $zedShortcutPath
 
 } catch {
     Write-Status "Error: $_"
